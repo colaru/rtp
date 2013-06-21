@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
 import org.vertx.java.core.Handler;
+import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.http.*;
 import org.vertx.testtools.TestVerticle;
 
@@ -63,17 +64,24 @@ public class BasicIntegrationTest extends TestVerticle {
         assertEquals("bar", "bar");
         container.deployVerticle(WebSoketServer.class.getName(), 2);
 
+        long startTime;
+        long endTime;
+
+        startTime = System.currentTimeMillis();
         System.out.println("Starting perf client");
         HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
             System.out.println("connecting ws");
             client.connectWebsocket("/someuri", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
+                    ws.write(new Buffer("request-string: " + connectCount));
                     System.out.println("ws connected: " + ++connectCount);
                     testComplete();
                 }
             });
         }
+        endTime = System.currentTimeMillis();
+        System.out.println("Ending perf client in: " + (endTime - startTime));
 
     }
 

@@ -1,6 +1,7 @@
 package com.openwager.rtp.test.integration.java;
 
 import org.vertx.java.core.Handler;
+import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.http.ServerWebSocket;
 import org.vertx.java.platform.Verticle;
 
@@ -13,6 +14,8 @@ public class WebSoketServer extends Verticle {
         vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).setSendBufferSize(BUFF_SIZE).
                 websocketHandler(new Handler<ServerWebSocket>() {
                     public void handle(ServerWebSocket ws) {
+                        ws.write(new Buffer("response-string: " + count));
+
                         System.out.println("connected " + ++count);
                     }
                 }).listen(8080, "localhost");
