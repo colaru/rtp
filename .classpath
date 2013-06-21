@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/groovy"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/io/vertx/vertx-core/2.0.0-CR1/vertx-core-2.0.0-CR1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/io/vertx/vertx-platform/2.0.0-CR1/vertx-platform-2.0.0-CR1.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/colaru/.gradle/caches/artifacts-24/filestore/org.codehaus.groovy/groovy-all/2.1.3/source/c06f5fff1d71322ad0229c8ccaeae397a52fab37/groovy-all-2.1.3-sources.jar" kind="lib" path="C:/Users/colaru/.gradle/caches/artifacts-24/filestore/org.codehaus.groovy/groovy-all/2.1.3/jar/57a40287304a1af0d90bf0956725e203d151be54/groovy-all-2.1.3.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/colaru/.gradle/caches/artifacts-24/filestore/io.vertx/lang-groovy/2.0.0-CR1/source/e0bc479d217995320194a35559076f251dc2be5/lang-groovy-2.0.0-CR1-sources.jar" kind="lib" path="C:/Users/colaru/.gradle/caches/artifacts-24/filestore/io.vertx/lang-groovy/2.0.0-CR1/jar/831f83e8bca55e55b538bbd5a717f3b35032854e/lang-groovy-2.0.0-CR1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/io/vertx/testtools/2.0.0-CR1/testtools-2.0.0-CR1.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/junit/junit/4.11/junit-4.11.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/io/netty/netty-all/4.0.0.CR5/netty-all-4.0.0.CR5.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/org/slf4j/slf4j-api/1.6.2/slf4j-api-1.6.2.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.1.4/jackson-core-2.1.4.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.1.2/jackson-annotations-2.1.2.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.1.3/jackson-databind-2.1.3.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/com/hazelcast/hazelcast/2.5.1/hazelcast-2.5.1.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/colaru/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16-sources.jar" kind="lib" path="C:/Users/colaru/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/colaru/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" exported="true"/>
+</classpath>

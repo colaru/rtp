@@ -1,0 +1,33 @@
+{
+
+  // Java verticle
+  "main":"com.openwager.rtp.PingVerticle",
+
+  // In this example we also provide various other versions of the main verticle, you can uncomment this and
+  // play around:
+
+  // Java *source* verticle
+  //"main":"JavaSourcePingVerticle.java",
+
+  // Compiled Groovy verticle - note that they must be prefixed with 'groovy:' to distinguish them from compiled Java verticles
+  //"main":"groovy:com.mycompany.myproject.GroovyPingVerticle",
+
+  // Groovy *script* verticle
+  //"main": "GroovyVerticle.groovy",
+
+  // JavaScript verticle
+  //"main": "ping_verticle.js",
+
+
+
+  // If your module is going to be registered in the Vert.x module registry you will also need the following
+  // mandatory fields
+  "description":"A sandbox for Vert.x performance tests",
+  "licenses": ["The Apache Software License Version 2.0"],
+  "author": "Cristian Olaru",
+
+  // Optional fields
+  "developers": ["Cristian Olaru"],
+  "keywords": ["vert.x", "performance"],
+  "homepage": "https://github.com/colaru"
+}
