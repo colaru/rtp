@@ -7,7 +7,7 @@ var eb = vertx.eventBus;
 var address = 'example.address'
 var creditsAddress = 'example.credits'
 
-var batchSize = 10000;
+var batchSize = 50000;
 
 var received = 0
 var count = 0
@@ -42,6 +42,7 @@ eb.send(creditsAddress, null);
 
 function vertxStop() {
   eb.unregisterHandler(address, handler);
+  console.log("handler is unregistered");
 }
 
 console.log("Started");
