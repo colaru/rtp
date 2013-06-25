@@ -7,7 +7,7 @@ var eb = vertx.eventBus;
 var address = 'example.address'
 var creditsAddress = 'example.credits'
 
-var batchSize = 50000;
+var batchSize = 10000;
 
 var received = 0
 var count = 0
@@ -38,7 +38,7 @@ var handler = function(message) {
 
 eb.registerHandler(address, handler);
 
-eb.send(creditsAddress, null);
+//eb.send(creditsAddress, null);
 
 function vertxStop() {
   eb.unregisterHandler(address, handler);

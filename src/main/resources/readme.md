@@ -1,6 +1,11 @@
 Start the sender first, then the handler:
-vertx run d:\WORK\REALTIME\rtp\src\main\resources\sender.js -cluster
-vertx run d:\WORK\REALTIME\rtp\src\main\resources\handler.js -cluster -cluster-port 25508
+vertx run sender.js -cluster
+vertx run handler.js -cluster -cluster-port 25508
+
+or
+
+vertx run d:\WORK\REALTIME\rtp\src\main\resources\sender.js -cluster -cluster-host 192.168.2.17
+vertx run d:\WORK\REALTIME\rtp\src\main\resources\handler.js -cluster -cluster-port 25508 -cluster-host 192.168.2.17 -instances 4
 
 From vert.x documentation:
 
