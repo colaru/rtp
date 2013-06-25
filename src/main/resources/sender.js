@@ -5,7 +5,7 @@ var eb = vertx.eventBus;
 var address = 'example.address'
 var creditsAddress = 'example.credits'
 
-var batchSize = 10000;
+var batchSize = 50000;
 
 var handler = function() {
   credits += batchSize;
@@ -24,7 +24,7 @@ function sendMessage() {
     if (credits > 0) {
       credits--;
       eb.send(address, "some-message");
-        console.log("sent message " + count);
+//        console.log("sent message " + count);
 //      stdout.println("sent message " + count);
       count++;
     }
