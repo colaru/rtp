@@ -71,17 +71,26 @@ public class BasicIntegrationTest extends TestVerticle {
         System.out.println("Starting perf client");
         HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
-            System.out.println("connecting ws");
+            System.out.println("connecting ws: " + i);
             client.connectWebsocket("/someuri", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
-                    ws.write(new Buffer("request-string: " + connectCount));
-                    System.out.println("ws connected: " + ++connectCount);
-                    testComplete();
+                    ws.write(new Buffer("request-string: " + ++connectCount));
+
+//                    System.out.println("ws connected: " + ++connectCount);
+
+                    ws.dataHandler(new Handler<Buffer>() {
+                        @Override
+                        public void handle(Buffer buff) {
+                            System.out.println("response:  " + buff.toString());
+                        }
+                    });
+
+//                    testComplete();
                 }
             });
         }
         endTime = System.currentTimeMillis();
-        System.out.println("Ending perf client in: " + (endTime - startTime));
+        System.out.println("Ending perf client in: " + (endTime - startTime) + " milliseconds");
 
     }
 
