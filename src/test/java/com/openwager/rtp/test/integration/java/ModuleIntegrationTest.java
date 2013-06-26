@@ -44,7 +44,6 @@ public class ModuleIntegrationTest extends TestVerticle {
     testComplete();
   }
 
-
   @Override
   public void start() {
     // Make sure we call initialize() - this sets up the assert stuff so assert functionality works correctly

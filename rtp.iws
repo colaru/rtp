@@ -2,28 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="6627d578-6e45-481b-b79f-0617440473c5" name="Default" comment="" />
-    <list default="true" id="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" name="No commit" comment="Read me to md.">
+    <list default="true" id="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" name="No commit" comment="Receive response.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/openwager/rtp/WebSoketServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/BasicIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/BasicIntegrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/WebSoketServer.java" afterPath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/WebSoketServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mod.json" afterPath="$PROJECT_DIR$/src/main/resources/mod.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rtp.iws" afterPath="$PROJECT_DIR$/rtp.iws" />
     </list>
     <ignored path="rtp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/a.dummy" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372160824698" ignored="false" />
+    <file path="/a.dummy" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372241456703" ignored="false" />
     <file path="/SomeVerticle.java" changelist="6627d578-6e45-481b-b79f-0617440473c5" time="1371804615326" ignored="false" />
     <file path="/BasicIntegrationTest.groovy" changelist="6627d578-6e45-481b-b79f-0617440473c5" time="1371804756200" ignored="false" />
-    <file path="/BasicIntegrationTest.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372170459184" ignored="false" />
+    <file path="/BasicIntegrationTest.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372247249468" ignored="false" />
     <file path="/README.md" changelist="6627d578-6e45-481b-b79f-0617440473c5" time="1371813495171" ignored="false" />
-    <file path="/Dummy.txt" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372170826383" ignored="false" />
-    <file path="/RateCounter.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1371816830906" ignored="false" />
+    <file path="/Dummy.txt" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372237358940" ignored="false" />
+    <file path="/RateCounter.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372235391132" ignored="false" />
     <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/wsperf/PerfServer.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372171896824" ignored="false" />
     <file path="/PerfServer.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1371818367464" ignored="false" />
     <file path="/WebSoketServer.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372153569840" ignored="false" />
-    <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/perf/RateCounter.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1371821580593" ignored="false" />
+    <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/perf/RateCounter.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372230533779" ignored="false" />
     <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/javascript/eb_perf/sender.js" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372156196559" ignored="false" />
     <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/javascript/eb_perf/handler.js" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372155493251" ignored="false" />
     <file path="/readme.md" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372169064274" ignored="false" />
     <file path="/sender.js" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372160499189" ignored="false" />
+    <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/wsperf/PerfClient.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372172547116" ignored="false" />
+    <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/httpperf/PerfServer.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372230038881" ignored="false" />
+    <file path="$PROJECT_DIR$/../../VERTEX/SRC/vert.x-1.3.1.final/vertx-examples/src/main/java/httpperf/PerfClient.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372230391298" ignored="false" />
+    <file path="/PerfClient.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372235280232" ignored="false" />
+    <file path="/ModuleIntegrationTest.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372240406887" ignored="false" />
+    <file path="/RTP.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372241516090" ignored="false" />
+    <file path="/fragment.java" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372247686915" ignored="false" />
+    <file path="/mod.json" changelist="21eb7d1f-600a-48b3-868d-b987f8fbfdd0" time="1372247897285" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,88 +99,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="handler.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/handler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="20" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSoketServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/WebSoketServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="64" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#534#875#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BasicIntegrationTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/BasicIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="72" selection-start="3348" selection-end="3348" vertical-scroll-proportion="-5.6">
+            <state line="62" column="30" selection-start="2284" selection-end="2316" vertical-scroll-proportion="0.20950705">
               <folding>
-                <element signature="e#2830#3418#0" expanded="true" />
-                <element signature="e#3101#3345#0" expanded="true" />
-                <element signature="e#3322#3323#0" expanded="true" />
+                <element signature="e#2832#3418#0" expanded="true" />
+                <element signature="e#3103#3347#0" expanded="true" />
+                <element signature="e#3324#3325#0" expanded="true" />
                 <element signature="e#3403#3404#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/README.txt">
+      <file leaf-file-name="ModuleIntegrationTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="10" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mod.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mod.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="46" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sender.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sender.js">
+      <file leaf-file-name="WebSoketServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/WebSoketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="11" selection-start="261" selection-end="268" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/README.md">
+      <file leaf-file-name="PingVerticle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/PingVerticle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="8" selection-start="448" selection-end="471" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SomeVerticle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/SomeVerticle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/readme.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="30" selection-start="101" selection-end="120" vertical-scroll-proportion="0.061261263">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JavaSourcePingVerticle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/JavaSourcePingVerticle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ping_verticle.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/ping_verticle.js">
+      <file leaf-file-name="basicIntegrationTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/integration_tests/javascript/basicIntegrationTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -196,22 +190,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/groovy/GroovyIntegrationTests.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/integration_tests/groovy/BasicIntegrationTest.groovy" />
-        <option value="$PROJECT_DIR$/src/test/resources/integration_tests/javascript/basicIntegrationTest.js" />
-        <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/README.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/resources/JavaSourcePingVerticle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/PingVerticle.java" />
-        <option value="$PROJECT_DIR$/src/main/groovy/com/openwager/rtp/GroovyPingVerticle.groovy" />
-        <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/RateCounter.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/integration_tests/javascript/readme.md" />
-        <option value="$PROJECT_DIR$/src/main/resources/handler.js" />
         <option value="$PROJECT_DIR$/src/main/resources/sender.js" />
         <option value="$PROJECT_DIR$/src/main/resources/readme.md" />
         <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/WebSoketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ConnectClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ConnectServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/WebsocketsExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/performance/PerfClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/performance/RateCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ws.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/performance/PerfServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/RTP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/PingVerticle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/openwager/rtp/WebSoketServer.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/BasicIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mod.json" />
+        <option value="$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -322,7 +316,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integration_tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -330,7 +346,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,6 +381,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="integration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="integration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,6 +518,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="performance" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -488,43 +606,21 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.openwager.rtp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WORK\REALTIME\rtp\src\main\resources" />
       <recent name="D:\WORK\REALTIME\rtp\src\test\resources\integration_tests\javascript" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WORK\REALTIME\rtp\src\main\java\com\openwager\rtp\ws\performance" />
+      <recent name="D:\WORK\REALTIME\rtp\src\main\java\com\openwager\rtp\ws" />
+      <recent name="D:\WORK\REALTIME\rtp\src\main\resources\eventbus\performance" />
       <recent name="D:\WORK\REALTIME\rtp\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.BasicIntegrationTest.testDeployWebSoketServerVerticle">
-    <configuration default="false" name="JavaScriptIntegrationTests" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.mycompany.myproject.test.integration.javascript.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="rtp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.mycompany.myproject.test.integration.javascript" />
-      <option name="MAIN_CLASS_NAME" value="com.mycompany.myproject.test.integration.javascript.JavaScriptIntegrationTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="BasicIntegrationTest.testDeployEventBusRateVerticle" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
@@ -556,34 +652,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BasicIntegrationTest.testDeployArbitraryVerticle" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.openwager.rtp.test.integration.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="rtp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.openwager.rtp.test.integration.java" />
-      <option name="MAIN_CLASS_NAME" value="com.openwager.rtp.test.integration.java.BasicIntegrationTest" />
-      <option name="METHOD_NAME" value="testDeployArbitraryVerticle" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -642,6 +710,68 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ModuleIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.openwager.rtp.test.integration.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rtp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.openwager.rtp.test.integration.java" />
+      <option name="MAIN_CLASS_NAME" value="com.openwager.rtp.test.integration.java.ModuleIntegrationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BasicIntegrationTest.testRTPWebSoket" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.openwager.rtp.test.integration.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="rtp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.openwager.rtp.test.integration.java" />
+      <option name="MAIN_CLASS_NAME" value="com.openwager.rtp.test.integration.java.BasicIntegrationTest" />
+      <option name="METHOD_NAME" value="testRTPWebSoket" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -712,19 +842,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JavaScriptIntegrationTests" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployEventBusRateVerticle" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployArbitraryVerticle" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployWebSoketServerVerticle" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployEventBusRateVerticle" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployWebSoketServerVerticle" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ModuleIntegrationTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testRTPWebSoket" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployWebSoketServerVerticle" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployEventBusRateVerticle" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployArbitraryVerticle" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.JavaScriptIntegrationTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testRTPWebSoket" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ModuleIntegrationTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BasicIntegrationTest.testDeployEventBusRateVerticle" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -797,7 +927,15 @@
       <created>1372169251067</created>
       <updated>1372169251067</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Receive response.">
+      <created>1372172247393</created>
+      <updated>1372172247393</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Event bus and web sockets tests from vert,x examples.">
+      <created>1372237364908</created>
+      <updated>1372237364908</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,6 +945,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14941302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -830,7 +969,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14941302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -876,7 +1014,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in handler and seder logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Event bus and web sockets tests from vert,x examples." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -898,6 +1036,8 @@
     <MESSAGE value="50000 messages" />
     <MESSAGE value="Read me to md." />
     <MESSAGE value="Changes in handler and seder logic." />
+    <MESSAGE value="Receive response." />
+    <MESSAGE value="Event bus and web sockets tests from vert,x examples." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -907,126 +1047,140 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/resources/integration_tests/groovy/ModuleIntegrationTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ws.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/integration_tests/groovy/BasicIntegrationTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ConnectServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" />
+        <state line="13" column="9" selection-start="302" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/performance/PerfServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="23" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.0">
+        <state line="21" column="10" selection-start="257" selection-end="718" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1794#2313#0" expanded="false" />
-            <element signature="e#2306#2307#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/testtools/2.0.0-CR1/testtools-2.0.0-CR1.jar!/org/vertx/testtools/TestVerticle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="19" selection-start="538" selection-end="538" vertical-scroll-proportion="0.34182304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/ConnectClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="18" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#697#849#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/performance/PerfClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="31" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1210#1993#0" expanded="true" />
+            <element signature="e#1376#1873#0" expanded="true" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/ws/WebsocketsExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="30" selection-start="281" selection-end="298" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#372#752#0" expanded="true" />
+            <element signature="e#525#686#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#769#968#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ping_verticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/integration_tests/javascript/basicIntegrationTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/PingVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="286" selection-end="298" vertical-scroll-proportion="0.0">
+        <state line="17" column="8" selection-start="448" selection-end="471" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/SomeVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+        <state line="5" column="13" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/eventbus/sender.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/openwager/rtp/WebSoketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="825" selection-end="832" vertical-scroll-proportion="0.26067907">
+        <state line="7" column="13" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/eventbus/handler.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mod.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="9" selection-start="701" selection-end="781" vertical-scroll-proportion="0.18619934">
+        <state line="4" column="46" selection-start="113" selection-end="113" vertical-scroll-proportion="-2.6153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/README.md">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/ModuleIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/JavaSourcePingVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ping_verticle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="261" selection-end="268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/WebSoketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="64" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
+        <state line="10" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#534#875#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/BasicIntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="72" selection-start="3348" selection-end="3348" vertical-scroll-proportion="-5.6">
+        <state line="62" column="30" selection-start="2284" selection-end="2316" vertical-scroll-proportion="0.20950705">
           <folding>
-            <element signature="e#2830#3418#0" expanded="true" />
-            <element signature="e#3101#3345#0" expanded="true" />
-            <element signature="e#3322#3323#0" expanded="true" />
+            <element signature="e#2832#3418#0" expanded="true" />
+            <element signature="e#3103#3347#0" expanded="true" />
+            <element signature="e#3324#3325#0" expanded="true" />
             <element signature="e#3403#3404#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/openwager/rtp/test/integration/java/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="101" selection-end="120" vertical-scroll-proportion="0.061261263">
-          <folding />
         </state>
       </provider>
     </entry>

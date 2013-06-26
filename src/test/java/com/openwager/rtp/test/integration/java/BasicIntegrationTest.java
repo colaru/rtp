@@ -62,7 +62,7 @@ public class BasicIntegrationTest extends TestVerticle {
     @Test
     public void testDeployWebSoketServerVerticle() {
         assertEquals("bar", "bar");
-        container.deployVerticle(WebSoketServer.class.getName(), 2);
+//        container.deployVerticle(WebSoketServer.class.getName(), 2);
 
         long startTime;
         long endTime;
