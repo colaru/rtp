@@ -1,5 +1,6 @@
 package com.openwager.rtp.test.integration.java;
 
+import com.openwager.rtp.WebSoketServer;
 import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
@@ -14,9 +15,6 @@ import static org.vertx.testtools.VertxAssert.*;
  * Simple integration test which shows tests deploying other verticles, using the Vert.x API etc
  */
 public class BasicIntegrationTest extends TestVerticle {
-
-    private static final int CONNS = 100;
-    int connectCount = 0;
 
     @Test
   /*
@@ -57,41 +55,6 @@ public class BasicIntegrationTest extends TestVerticle {
     public void testDeployArbitraryVerticle() {
         assertEquals("bar", "bar");
         container.deployVerticle(SomeVerticle.class.getName());
-    }
-
-    @Test
-    public void testDeployWebSoketServerVerticle() {
-        assertEquals("bar", "bar");
-//        container.deployVerticle(WebSoketServer.class.getName(), 2);
-
-        long startTime;
-        long endTime;
-
-        startTime = System.currentTimeMillis();
-        System.out.println("Starting perf client");
-        HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
-        for (int i = 0; i < CONNS; i++) {
-            System.out.println("connecting ws: " + i);
-            client.connectWebsocket("/someuri", new Handler<WebSocket>() {
-                public void handle(WebSocket ws) {
-                    ws.write(new Buffer("request-string: " + ++connectCount));
-
-//                    System.out.println("ws connected: " + ++connectCount);
-
-                    ws.dataHandler(new Handler<Buffer>() {
-                        @Override
-                        public void handle(Buffer buff) {
-                            System.out.println("response:  " + buff.toString());
-                        }
-                    });
-
-                    testComplete();
-                }
-            });
-        }
-        endTime = System.currentTimeMillis();
-        System.out.println("Ending perf client in: " + (endTime - startTime) + " milliseconds");
-
     }
 
     @Test

@@ -4,7 +4,10 @@ import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
 import org.vertx.java.core.Handler;
+import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.eventbus.Message;
+import org.vertx.java.core.http.HttpClient;
+import org.vertx.java.core.http.WebSocket;
 import org.vertx.testtools.TestVerticle;
 
 import static org.vertx.testtools.VertxAssert.*;
@@ -19,24 +22,28 @@ import static org.vertx.testtools.VertxAssert.*;
  */
 public class ModuleIntegrationTest extends TestVerticle {
 
-  @Test
-  public void testPing() {
-    container.logger().info("in testPing()");
-    vertx.eventBus().send("ping-address", "ping!", new Handler<Message<String>>() {
-      @Override
-      public void handle(Message<String> reply) {
-        assertEquals("pong!", reply.body());
+    private static final int CONNS = 1;
+    int connectCount = 0;
 
-        /*
-        If we get here, the test is complete
-        You must always call `testComplete()` at the end. Remember that testing is *asynchronous* so
-        we cannot assume the test is complete by the time the test method has finished executing like
-        in standard synchronous tests
-        */
-        testComplete();
-      }
-    });
-  }
+
+//  @Test
+//  public void testPing() {
+//    container.logger().info("in testPing()");
+//    vertx.eventBus().send("ping-address", "ping!", new Handler<Message<String>>() {
+//      @Override
+//      public void handle(Message<String> reply) {
+//        assertEquals("pong!", reply.body());
+//
+//        /*
+//        If we get here, the test is complete
+//        You must always call `testComplete()` at the end. Remember that testing is *asynchronous* so
+//        we cannot assume the test is complete by the time the test method has finished executing like
+//        in standard synchronous tests
+//        */
+//        testComplete();
+//      }
+//    });
+//  }
 
   @Test
   public void testSomethingElse() {
@@ -44,7 +51,37 @@ public class ModuleIntegrationTest extends TestVerticle {
     testComplete();
   }
 
-  @Override
+    @Test
+    public void testWebSoketServer() {
+        long startTime;
+        long endTime;
+
+        startTime = System.currentTimeMillis();
+        System.out.println("Starting perf client");
+        HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
+        for (int i = 0; i < CONNS; i++) {
+            System.out.println("Connecting ws: " + (i+1));
+            client.connectWebsocket("/someuri", new Handler<WebSocket>() {
+                public void handle(WebSocket ws) {
+                    ws.write(new Buffer("request-string: " + ++connectCount));
+                    ws.dataHandler(new Handler<Buffer>() {
+                        @Override
+                        public void handle(Buffer buff) {
+                            System.out.println("response:  " + buff.toString());
+                        }
+                    });
+                        testComplete();
+                }
+            });
+
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Ending perf client in: " + (endTime - startTime) + " milliseconds");
+
+    }
+
+
+    @Override
   public void start() {
     // Make sure we call initialize() - this sets up the assert stuff so assert functionality works correctly
     initialize();

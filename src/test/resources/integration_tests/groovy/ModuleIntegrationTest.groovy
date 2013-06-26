@@ -7,6 +7,9 @@
  * This test demonstrates how to do that.
  */
 
+
+import com.openwager.rtp.PingVerticle
+
 import static org.vertx.testtools.VertxAssert.*
 
 // And import static the VertxTests script
@@ -15,6 +18,8 @@ import org.vertx.groovy.testtools.VertxTests;
 // The test methods must being with "test"
 
 def testPing() {
+  container.deployVerticle(PingVerticle.class.getName())
+
   container.logger.info("in testPing()")
   println "vertx is ${vertx.getClass().getName()}"
   vertx.eventBus.send("ping-address", "ping!", { reply ->
