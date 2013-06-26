@@ -85,7 +85,7 @@ public class BasicIntegrationTest extends TestVerticle {
                         }
                     });
 
-//                    testComplete();
+                    testComplete();
                 }
             });
         }
