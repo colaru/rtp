@@ -84,14 +84,17 @@ public class BasicIntegrationTest extends TestVerticle {
 
     @Test
     public void testCompleteOnTimer() {
+        container.logger().info("Begin");
         vertx.setTimer(1000, new Handler<Long>() {
             @Override
             public void handle(Long timerID) {
+
                 assertNotNull(timerID);
 
                 // This demonstrates how tests are asynchronous - the timer does not fire until 1 second later -
                 // which is almost certainly after the test method has completed.
                 testComplete();
+                container.logger().info("End");
             }
         });
     }
