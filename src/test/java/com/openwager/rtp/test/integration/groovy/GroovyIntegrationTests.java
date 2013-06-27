@@ -14,10 +14,10 @@ import org.vertx.testtools.TestVerticleInfo;
  *
  * You do not need to edit this file unless you want it to look for tests elsewhere
  */
-@TestVerticleInfo(filenameFilter=".+\\.groovy", funcRegex="def[\\s]+(test[^\\s(]+)")
-@RunWith(ScriptClassRunner.class)
-public class GroovyIntegrationTests {
-  @Test
-  public void __vertxDummy() {
-  }
-}
+//@TestVerticleInfo(filenameFilter=".+\\.groovy", funcRegex="def[\\s]+(test[^\\s(]+)")
+//@RunWith(ScriptClassRunner.class)
+//public class GroovyIntegrationTests {
+//  @Test
+//  public void __vertxDummy() {
+//  }
+//}

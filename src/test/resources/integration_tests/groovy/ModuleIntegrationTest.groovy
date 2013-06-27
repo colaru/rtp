@@ -8,7 +8,7 @@
  */
 
 
-import com.openwager.rtp.PingVerticle
+import com.openwager.rtp.EventBusVerticle
 
 import static org.vertx.testtools.VertxAssert.*
 
@@ -18,7 +18,7 @@ import org.vertx.groovy.testtools.VertxTests;
 // The test methods must being with "test"
 
 def testPing() {
-  container.deployVerticle(PingVerticle.class.getName())
+  container.deployVerticle(EventBusVerticle.class.getName())
 
   container.logger.info("in testPing()")
   println "vertx is ${vertx.getClass().getName()}"

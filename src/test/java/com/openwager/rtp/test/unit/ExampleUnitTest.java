@@ -1,6 +1,6 @@
 package com.openwager.rtp.test.unit;
 
-import com.openwager.rtp.PingVerticle;
+import com.openwager.rtp.EventBusVerticle;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -9,7 +9,7 @@ public class ExampleUnitTest {
 
   @Test
   public void testVerticle() {
-    PingVerticle vert = new PingVerticle();
+    EventBusVerticle vert = new EventBusVerticle();
 
     // Interrogate your classes directly....
 

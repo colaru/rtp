@@ -14,10 +14,10 @@ import org.vertx.testtools.TestVerticleInfo;
  *
  * You do not need to edit this file unless you want it to look for tests elsewhere
  */
-@TestVerticleInfo(filenameFilter=".+\\.js", funcRegex="function[\\s]+(test[^\\s(]+)")
-@RunWith(ScriptClassRunner.class)
-public class JavaScriptIntegrationTests {
-  @Test
-  public void __vertxDummy() {
-  }
-}
+//@TestVerticleInfo(filenameFilter=".+\\.js", funcRegex="function[\\s]+(test[^\\s(]+)")
+//@RunWith(ScriptClassRunner.class)
+//public class JavaScriptIntegrationTests {
+//  @Test
+//  public void __vertxDummy() {
+//  }
+//}

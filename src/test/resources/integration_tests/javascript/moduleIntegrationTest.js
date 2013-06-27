@@ -40,7 +40,7 @@ container.deployModule(java.lang.System.getProperty("vertx.modulename"), functio
   // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
   vassert.assertNull(err);
   // If deployed correctly then start the tests!
-  vertxTests.startTests(script);
+//  vertxTests.startTests(script);
 });
 
 
