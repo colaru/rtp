@@ -12,12 +12,11 @@ public class EventBusVerticle extends Verticle {
 
   public void start() {
 
-
     vertx.eventBus().registerHandler("default.address", new Handler<Message<String>>() {
       @Override
       public void handle(Message<String> message) {
-        message.reply("get it");
-        container.logger().info("Sent back pong");
+        message.reply("Test");
+        container.logger().info("Sent back: " + message.toString());
       }
     });
 
