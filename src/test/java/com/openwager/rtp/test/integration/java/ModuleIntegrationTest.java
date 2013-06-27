@@ -8,9 +8,12 @@ import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.core.http.HttpClient;
 import org.vertx.java.core.http.WebSocket;
+import org.vertx.java.core.json.JsonArray;
+import org.vertx.java.core.json.JsonObject;
 import org.vertx.testtools.TestVerticle;
 
 import static org.vertx.testtools.VertxAssert.*;
+import static org.vertx.testtools.VertxAssert.assertTrue;
 
 /**
  * Example Java integration test that deploys the module that this project builds.
@@ -63,11 +66,13 @@ public class ModuleIntegrationTest extends TestVerticle {
             System.out.println("Connecting ws: " + (i+1));
             client.connectWebsocket("/someuri", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
-                    ws.write(new Buffer("request-string: " + ++connectCount));
+
+                    ws.write(new Buffer(createEventMessage().toString()));
                     ws.dataHandler(new Handler<Buffer>() {
                         @Override
                         public void handle(Buffer buff) {
-                            System.out.println("response:  " + buff.toString());
+                            assertTrue(buff.toString().equals(createEventMessage()));
+                            System.out.println("Response:  " + buff.toString());
                         }
                     });
                         testComplete();
@@ -80,6 +85,15 @@ public class ModuleIntegrationTest extends TestVerticle {
 
     }
 
+    private JsonObject createEventMessage() {
+        JsonObject message = new JsonObject().putString("_t", "msg");
+        JsonObject header = new JsonObject().putString("_t", "hdr").putString("cid", "m4");
+        JsonArray numbers = new JsonArray().addNumber(1).addNumber(2).addNumber(12312).addNumber(12);
+        JsonObject body = new JsonObject().putString("_t", "sum").putArray("numbers", numbers);
+        message.putObject("header", header);
+        message.putObject("body", body);
+        return message;
+    }
 
     @Override
   public void start() {
