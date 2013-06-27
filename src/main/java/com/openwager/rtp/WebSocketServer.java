@@ -17,6 +17,12 @@ public class WebSocketServer extends Verticle {
                     public void handle(ServerWebSocket ws) {
 //                        ws.write(new Buffer("response-string:   " + ++count));
                         container.logger().info("Connected: " + ++count);
+                        ws.dataHandler(new Handler<Buffer>() {
+                            public void handle(Buffer data) {
+                                vertx.eventBus().publish("default.address", data.toString());
+                            }
+                        });
+
                         Pump.createPump(ws, ws).start();
                     }
                 }).listen(8080, "localhost");

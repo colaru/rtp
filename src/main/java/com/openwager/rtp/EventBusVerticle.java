@@ -13,10 +13,10 @@ public class EventBusVerticle extends Verticle {
   public void start() {
 
 
-    vertx.eventBus().registerHandler("ping-address", new Handler<Message<String>>() {
+    vertx.eventBus().registerHandler("default.address", new Handler<Message<String>>() {
       @Override
       public void handle(Message<String> message) {
-        message.reply("pong!");
+        message.reply("get it");
         container.logger().info("Sent back pong");
       }
     });
