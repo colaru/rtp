@@ -1,6 +1,5 @@
 package com.openwager.rtp.test.integration.java;
 
-import com.openwager.rtp.EventBusVerticle;
 import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
@@ -14,7 +13,6 @@ import org.vertx.java.core.json.JsonObject;
 import org.vertx.testtools.TestVerticle;
 
 import static org.vertx.testtools.VertxAssert.*;
-import static org.vertx.testtools.VertxAssert.assertTrue;
 
 /**
  * Example Java integration test that deploys the module that this project builds.
@@ -29,9 +27,6 @@ public class ModuleIntegrationTest extends TestVerticle {
     private static final int CONNS = 1;
     int connectCount = 0;
 
-
-
-
   @Test
   public void testSomethingElse() {
     // Whatever
@@ -45,7 +40,7 @@ public class ModuleIntegrationTest extends TestVerticle {
         long endTime;
 
         startTime = System.currentTimeMillis();
-        container.logger().info("Starting perf client");
+        container.logger().info("Starting web socket test");
         HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
             container.logger().info("Connecting ws: " + (i+1));
@@ -66,8 +61,45 @@ public class ModuleIntegrationTest extends TestVerticle {
             });
         }
         endTime = System.currentTimeMillis();
-        container.logger().info("Ending perf (asynchronous call) client in: " + (endTime - startTime) + " milliseconds");
+        container.logger().info("Ending web socket test (asynchronous call) client in: " + (endTime - startTime) + " milliseconds");
+    }
 
+    // Here is a surprise why the service bus event published by WebSocket verticle is not catch by local handler
+    // Maybe the event buss is not clustered
+    @Test
+    public void testWebSocketServerAndEventBus() {
+        container.logger().info("Starting web socket and service bus test");
+
+        vertx.eventBus().registerHandler("default.address", new Handler<Message>() {
+            @Override
+            public void handle(Message reply) {
+                assertEquals(createEventMessage().toString(), reply.body().toString());
+                container.logger().info("Response on Event Bus:  " + reply.body().toString());
+//                testComplete();
+            }
+        });
+
+        vertx.eventBus().publish("default.address", createEventMessage());
+
+        HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
+        container.logger().info("Connecting ws ");
+
+        client.connectWebsocket("/rtp", new Handler<WebSocket>() {
+            public void handle(WebSocket ws) {
+
+                ws.write(new Buffer(createEventMessage().toString()));
+
+                ws.dataHandler(new Handler<Buffer>() {
+                    @Override
+                    public void handle(Buffer buff) {
+                        assertEquals(buff.toString(), createEventMessage().toString());
+                        container.logger().info("Response on Web Socket:  " + buff.toString());
+
+                        testComplete();
+                    }
+                });
+            }
+        });
     }
 
     private JsonObject createEventMessage() {

@@ -19,7 +19,8 @@ public class WebSocketServer extends Verticle {
                         container.logger().info("Connected: " + ++count);
                         ws.dataHandler(new Handler<Buffer>() {
                             public void handle(Buffer data) {
-                                vertx.eventBus().publish("default.address", data.toString());
+                                vertx.eventBus().publish("default.address", data);
+                                vertx.eventBus().publish("default.address", "Test");
                             }
                         });
 
