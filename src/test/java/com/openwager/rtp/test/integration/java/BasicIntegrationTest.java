@@ -1,10 +1,14 @@
 package com.openwager.rtp.test.integration.java;
 
 import com.openwager.rtp.EventBusVerticle;
+import com.openwager.rtp.ws.performance.PerfClient;
+import com.openwager.rtp.ws.performance.PerfServer;
+import com.openwager.rtp.ws.performance.RateCounter;
 import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
 import org.vertx.java.core.Handler;
+import org.vertx.java.core.VoidHandler;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.core.http.*;
 import org.vertx.java.core.json.JsonArray;
@@ -39,6 +43,19 @@ public class BasicIntegrationTest extends TestVerticle {
                 testComplete();
             }
         });
+    }
+
+    @Test
+    public void testWebsocketPerformance() {
+
+        JsonObject config = container.config();
+        System.out.println("Config is " + config);
+
+        container.deployVerticle(RateCounter.class.getName());
+        container.deployVerticle(PerfServer.class.getName());
+        container.deployVerticle(PerfClient.class.getName());
+
+        testComplete(); // uncomment for long time running the test
     }
 
     @Test

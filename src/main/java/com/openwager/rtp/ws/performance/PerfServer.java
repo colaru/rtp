@@ -11,6 +11,9 @@ public class PerfServer extends Verticle {
   int count = 0;
 
   public void start() {
+
+    System.out.println("Starting perf server");
+
     vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).setSendBufferSize(BUFF_SIZE).setAcceptBacklog(32000).
         websocketHandler(new Handler<ServerWebSocket>() {
 

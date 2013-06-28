@@ -23,6 +23,8 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
   }
 
   public void start() {
+    System.out.println("Starting rate counter");
+
     vertx.eventBus().registerHandler("rate-counter", this);
     vertx.setPeriodic(30, new Handler<Long>() {
       public void handle(Long id) {

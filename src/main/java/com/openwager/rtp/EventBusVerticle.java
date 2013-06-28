@@ -16,11 +16,11 @@ public class EventBusVerticle extends Verticle {
       @Override
       public void handle(Message<String> message) {
         message.reply("Test");
-        container.logger().info("Sent back: " + message.toString());
+        container.logger().info("Received: " + message.toString());
       }
     });
 
-    container.logger().info("EventBusVerticle started");
+    container.logger().info("Event Bus Verticle started");
 
   }
 }
