@@ -46,6 +46,31 @@ public class BasicIntegrationTest extends TestVerticle {
     }
 
     @Test
+    public void testEventBusPublishSubscribe() {
+
+        container.deployVerticle(EventBusVerticle.class.getName());
+
+        container.logger().info("In Event Bus test() PublishSubscribe");
+
+        vertx.eventBus().registerHandler("default.address", new Handler<Message<String>>() {
+            @Override
+            public void handle(Message<String> reply) {
+                assertEquals(createEventMessage(), reply.body());
+
+        /*
+        If we get here, the test is complete
+        You must always call `testComplete()` at the end. Remember that testing is *asynchronous* so
+        we cannot assume the test is complete by the time the test method has finished executing like
+        in standard synchronous tests
+        */
+                testComplete();
+            }
+        });
+
+        vertx.eventBus().publish("default.address", createEventMessage());
+    }
+
+    @Test
     public void testWebsocketPerformance() {
 
         JsonObject config = container.config();
@@ -102,7 +127,7 @@ public class BasicIntegrationTest extends TestVerticle {
     @Test
     public void testCompleteOnTimer() {
         container.logger().info("Begin");
-        vertx.setTimer(1000, new Handler<Long>() {
+        vertx.setTimer(2000, new Handler<Long>() {
             @Override
             public void handle(Long timerID) {
 
