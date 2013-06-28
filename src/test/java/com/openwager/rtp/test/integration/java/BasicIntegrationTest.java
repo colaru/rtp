@@ -26,31 +26,58 @@ public class BasicIntegrationTest extends TestVerticle {
     @Test
     public void testEventBusPointToPoint() {
 
-        container.deployVerticle(EventBusVerticle.class.getName());
-
-        container.logger().info("In Event Bus test() PointToPoint");
-        vertx.eventBus().send("default.address", createEventMessage(), new Handler<Message<String>>() {
+        container.deployVerticle(EventBusVerticle.class.getName(), new AsyncResultHandler<String>() {
             @Override
-            public void handle(Message<String> reply) {
-                assertEquals("Test", reply.body());
+            public void handle(AsyncResult<String> asyncResult) {
+                // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
+                if (asyncResult.failed()) {
+                    container.logger().error(asyncResult.cause());
+                } else {
+                    container.logger().info("In Event Bus test() PointToPoint");
+                    vertx.eventBus().send("default.address", createEventMessage(), new Handler<Message<String>>() {
+                        @Override
+                        public void handle(Message<String> reply) {
+                            assertEquals("Test", reply.body());
 
-        /*
-        If we get here, the test is complete
-        You must always call `testComplete()` at the end. Remember that testing is *asynchronous* so
-        we cannot assume the test is complete by the time the test method has finished executing like
-        in standard synchronous tests
-        */
-                testComplete();
+                /*
+                If we get here, the test is complete
+                You must always call `testComplete()` at the end. Remember that testing is *asynchronous* so
+                we cannot assume the test is complete by the time the test method has finished executing like
+                in standard synchronous tests
+                */
+                            testComplete();
+                        }
+                    });
+                }
+                assertTrue(asyncResult.succeeded());
+                assertNotNull("deploymentID should not be null", asyncResult.result());
+                // If deployed correctly then start the tests!
+
             }
         });
+
+
     }
 
     @Test
     public void testEventBusPublishSubscribe() {
 
-        container.deployVerticle(EventBusVerticle.class.getName());
+        container.deployVerticle(EventBusVerticle.class.getName(), new AsyncResultHandler<String>() {
+            @Override
+            public void handle(AsyncResult<String> asyncResult) {
+                // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
+                if (asyncResult.failed()) {
+                    container.logger().error(asyncResult.cause());
+                }
+                assertTrue(asyncResult.succeeded());
+                assertNotNull("deploymentID should not be null", asyncResult.result());
+                // If deployed correctly then start the tests!
+
+            }});
 
         container.logger().info("In Event Bus test() PublishSubscribe");
+
+        vertx.eventBus().publish("default.address", createEventMessage());
 
         vertx.eventBus().registerHandler("default.address", new Handler<Message<String>>() {
             @Override
@@ -70,18 +97,18 @@ public class BasicIntegrationTest extends TestVerticle {
         vertx.eventBus().publish("default.address", createEventMessage());
     }
 
-    @Test
-    public void testWebsocketPerformance() {
-
-        JsonObject config = container.config();
-        System.out.println("Config is " + config);
-
-        container.deployVerticle(RateCounter.class.getName());
-        container.deployVerticle(PerfServer.class.getName());
-        container.deployVerticle(PerfClient.class.getName());
-
-        testComplete(); // uncomment for long time running the test
-    }
+//    @Test
+//    public void testWebsocketPerformance() {
+//
+//        JsonObject config = container.config();
+//        System.out.println("Config is " + config);
+//
+//        container.deployVerticle(RateCounter.class.getName());
+//        container.deployVerticle(PerfServer.class.getName());
+//        container.deployVerticle(PerfClient.class.getName());
+//
+//        testComplete(); // uncomment for long time running the test
+//    }
 
     @Test
   /*
