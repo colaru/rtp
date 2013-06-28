@@ -64,8 +64,6 @@ public class ModuleIntegrationTest extends TestVerticle {
         container.logger().info("Ending web socket test (asynchronous call) client in: " + (endTime - startTime) + " milliseconds");
     }
 
-    // Here is a surprise why the service bus event published by WebSocket verticle is not catch by local handler
-    // Maybe the event buss is not clustered
     @Test
     public void testWebSocketServerAndEventBus() {
         container.logger().info("Starting web socket and service bus test");
