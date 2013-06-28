@@ -45,10 +45,10 @@ public class ModuleIntegrationTest extends TestVerticle {
         long endTime;
 
         startTime = System.currentTimeMillis();
-        System.out.println("Starting perf client");
+        container.logger().info("Starting perf client");
         HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
-            System.out.println("Connecting ws: " + (i+1));
+            container.logger().info("Connecting ws: " + (i+1));
             client.connectWebsocket("/rtp", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
 
@@ -57,7 +57,7 @@ public class ModuleIntegrationTest extends TestVerticle {
                         @Override
                         public void handle(Buffer buff) {
                             assertEquals(buff.toString(), createEventMessage().toString());
-                            System.out.println("Response:  " + buff.toString());
+                            container.logger().info("Response:  " + buff.toString());
 
                             testComplete();
                         }
@@ -66,7 +66,7 @@ public class ModuleIntegrationTest extends TestVerticle {
             });
         }
         endTime = System.currentTimeMillis();
-        System.out.println("Ending perf (asynchronous call) client in: " + (endTime - startTime) + " milliseconds");
+        container.logger().info("Ending perf (asynchronous call) client in: " + (endTime - startTime) + " milliseconds");
 
     }
 

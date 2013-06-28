@@ -55,8 +55,6 @@ public class BasicIntegrationTest extends TestVerticle {
 
             }
         });
-
-
     }
 
     @Test
@@ -101,7 +99,7 @@ public class BasicIntegrationTest extends TestVerticle {
 //    public void testWebsocketPerformance() {
 //
 //        JsonObject config = container.config();
-//        System.out.println("Config is " + config);
+//        container.logger().info("Config is " + config);
 //
 //        container.deployVerticle(RateCounter.class.getName());
 //        container.deployVerticle(PerfServer.class.getName());
