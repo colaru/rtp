@@ -14,17 +14,17 @@ public class WebSocketServer extends Verticle {
     public void start() {
         vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).setSendBufferSize(BUFF_SIZE).
                 websocketHandler(new Handler<ServerWebSocket>() {
-                    public void handle(ServerWebSocket ws) {
+                    public void handle(final ServerWebSocket ws) {
 //                        ws.write(new Buffer("response-string:   " + ++count));
                         container.logger().info("Connected: " + ++count);
                         ws.dataHandler(new Handler<Buffer>() {
                             public void handle(Buffer data) {
+                                container.logger().info("Put an event on Event Bus: " + data.toString());
                                 vertx.eventBus().publish("default.address", data);
-                                vertx.eventBus().publish("default.address", "Test");
+                                ws.writeTextFrame(data.toString()); // Echo it back
                             }
                         });
-
-                        Pump.createPump(ws, ws).start();
+//                        Pump.createPump(ws, ws).start();
                     }
                 }).listen(8080, "localhost");
     }

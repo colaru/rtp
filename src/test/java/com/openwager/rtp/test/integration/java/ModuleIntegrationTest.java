@@ -79,7 +79,7 @@ public class ModuleIntegrationTest extends TestVerticle {
             }
         });
 
-        vertx.eventBus().publish("default.address", createEventMessage());
+//        vertx.eventBus().publish("default.address", createEventMessage());
 
         HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
         container.logger().info("Connecting ws ");
