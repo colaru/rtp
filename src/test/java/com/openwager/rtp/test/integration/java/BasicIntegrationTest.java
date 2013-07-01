@@ -95,19 +95,6 @@ public class BasicIntegrationTest extends TestVerticle {
         vertx.eventBus().publish("default.address", createEventMessage());
     }
 
-//    @Test
-//    public void testWebsocketPerformance() {
-//
-//        JsonObject config = container.config();
-//        container.logger().info("Config is " + config);
-//
-//        container.deployVerticle(RateCounter.class.getName());
-//        container.deployVerticle(PerfServer.class.getName());
-//        container.deployVerticle(PerfClient.class.getName());
-//
-//        testComplete(); // uncomment for long time running the test
-//    }
-
     @Test
   /*
   This demonstrates using the Vert.x API from within a test.
