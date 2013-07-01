@@ -3,6 +3,7 @@ package com.openwager.rtp;
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.http.ServerWebSocket;
+import org.vertx.java.core.json.JsonObject;
 import org.vertx.java.core.streams.Pump;
 import org.vertx.java.platform.Verticle;
 
@@ -12,6 +13,12 @@ public class WebSocketServer extends Verticle {
     int count = 0;
 
     public void start() {
+
+        JsonObject config = container.config();
+        container.logger().info("Config is " + config);
+
+        int port = config.getInteger("port");
+
         vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).setSendBufferSize(BUFF_SIZE).
                 websocketHandler(new Handler<ServerWebSocket>() {
                     public void handle(final ServerWebSocket ws) {
@@ -26,6 +33,6 @@ public class WebSocketServer extends Verticle {
                         });
 //                        Pump.createPump(ws, ws).start();
                     }
-                }).listen(8080, "localhost");
+                }).listen(port, "localhost");
     }
 }

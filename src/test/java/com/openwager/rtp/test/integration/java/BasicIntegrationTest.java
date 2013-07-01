@@ -60,18 +60,18 @@ public class BasicIntegrationTest extends TestVerticle {
     @Test
     public void testEventBusPublishSubscribe() {
 
-        container.deployVerticle(EventBusVerticle.class.getName(), new AsyncResultHandler<String>() {
-            @Override
-            public void handle(AsyncResult<String> asyncResult) {
-                // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
-                if (asyncResult.failed()) {
-                    container.logger().error(asyncResult.cause());
-                }
-                assertTrue(asyncResult.succeeded());
-                assertNotNull("deploymentID should not be null", asyncResult.result());
-                // If deployed correctly then start the tests!
-
-            }});
+//        container.deployVerticle(EventBusVerticle.class.getName(), new AsyncResultHandler<String>() {
+//            @Override
+//            public void handle(AsyncResult<String> asyncResult) {
+//                // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
+//                if (asyncResult.failed()) {
+//                    container.logger().error(asyncResult.cause());
+//                }
+//                assertTrue(asyncResult.succeeded());
+//                assertNotNull("deploymentID should not be null", asyncResult.result());
+//                // If deployed correctly then start the tests!
+//
+//            }});
 
         container.logger().info("In Event Bus test() PublishSubscribe");
 

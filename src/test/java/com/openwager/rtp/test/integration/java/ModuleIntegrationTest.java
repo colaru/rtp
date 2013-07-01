@@ -73,7 +73,7 @@ public class ModuleIntegrationTest extends TestVerticle {
             public void handle(Message reply) {
                 assertEquals(createEventMessage().toString(), reply.body().toString());
                 container.logger().info("Response on Event Bus:  " + reply.body().toString());
-//                testComplete();
+                testComplete();
             }
         });
 
@@ -116,7 +116,16 @@ public class ModuleIntegrationTest extends TestVerticle {
     initialize();
     // Deploy the module - the System property `vertx.modulename` will contain the name of the module so you
     // don't have to hardecode it in your tests
-    container.deployModule(System.getProperty("vertx.modulename"), new AsyncResultHandler<String>() {
+
+    JsonObject config = new JsonObject();
+    JsonObject webSocketServer = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+
+    JsonObject eventBusVerticle = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+
+    config.putObject("webSocketServer", webSocketServer);
+    config.putObject("eventBusVerticle", eventBusVerticle);
+
+    container.deployModule(System.getProperty("vertx.modulename"), config, new AsyncResultHandler<String>() {
       @Override
       public void handle(AsyncResult<String> asyncResult) {
       // Deployment is asynchronous and this this handler will be called when it's complete (or failed)
