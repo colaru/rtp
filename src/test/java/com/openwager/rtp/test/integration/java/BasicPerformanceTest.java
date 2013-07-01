@@ -27,7 +27,7 @@ public class BasicPerformanceTest extends TestVerticle {
         container.deployVerticle(PerfServer.class.getName());
         container.deployVerticle(PerfClient.class.getName());
 
-//        testComplete(); // uncomment for long time running the test
+        testComplete(); // uncomment for long time running the test
     }
 
     @Test

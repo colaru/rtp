@@ -20,7 +20,7 @@ public class PerfServer extends Verticle {
       public void handle(ServerWebSocket ws) {
         System.out.println("connected " +  ++count);
 
-//        calculateFibonacciSeries(200);
+        calculateFibonacciSeries(200);
         Pump.createPump(ws, ws, BUFF_SIZE).start();
       }
     }).listen(8080, "localhost");
