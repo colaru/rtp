@@ -48,6 +48,8 @@ public class ModuleIntegrationTest extends TestVerticle {
                 public void handle(WebSocket ws) {
 
                     ws.write(new Buffer(Util.createEventMessage().toString()));
+                    vertx.eventBus().publish("default.address", Util.createEventMessage().toString());
+
                     ws.dataHandler(new Handler<Buffer>() {
                         @Override
                         public void handle(Buffer buff) {
