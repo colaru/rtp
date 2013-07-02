@@ -22,6 +22,7 @@ Verticles:
 * EventBusVerticle - a event bus handler that log the message received
 
 Tests:
+
 1. testEventBusPointToPoint (BasicIntegrationTest) - test event bus point to point
 
 2. testEventBusPublishSubscribe (BasicIntegrationTest) - test event bus pub/subscribe
