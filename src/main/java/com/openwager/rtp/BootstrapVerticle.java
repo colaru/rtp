@@ -10,11 +10,16 @@ public class BootstrapVerticle extends Verticle {
     public void start() {
 
         JsonObject appConfig = container.config();
+
         container.logger().info("Config is " + appConfig);
         container.logger().info("Number of cores is " + Runtime.getRuntime().availableProcessors());
 
+        if(!appConfig.toString().contains("webSocketServer")) {
+            String conf = "{\"webSocketServer\": {\"port\": 8081,\"instances\": 1},\"eventBusVerticle\": {\"instances\": 1}}";
+            appConfig = new JsonObject(conf);
+        }
+
         JsonObject webSocketServerConfig = appConfig.getObject("webSocketServer");
-        webSocketServerConfig.putString("startMessage", "WS Server is started!");
 
         container.deployVerticle(WebSocketServer.class.getName(),
                 webSocketServerConfig,
