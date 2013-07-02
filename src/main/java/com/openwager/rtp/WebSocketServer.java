@@ -36,7 +36,9 @@ public class WebSocketServer extends Verticle {
                             }
                         });
 
-                        vertx.eventBus().registerHandler("default.address", new Handler<Message<String>>() {
+                        container.logger().info("Topic name: " + ws.path());
+
+                        vertx.eventBus().registerHandler(ws.path().replace("/", ""), new Handler<Message<String>>() {
                             @Override
                             public void handle(Message<String> message) {
                                 message.reply("Test");

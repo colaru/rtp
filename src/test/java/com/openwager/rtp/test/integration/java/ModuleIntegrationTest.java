@@ -44,7 +44,7 @@ public class ModuleIntegrationTest extends TestVerticle {
         HttpClient client = vertx.createHttpClient().setPort(8081).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
             container.logger().info("Connecting ws: " + (i+1));
-            client.connectWebsocket("/rtp", new Handler<WebSocket>() {
+            client.connectWebsocket("/default.address", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
 
                     ws.write(new Buffer(Util.createEventMessage().toString()));
@@ -84,7 +84,7 @@ public class ModuleIntegrationTest extends TestVerticle {
         HttpClient client = vertx.createHttpClient().setPort(8081).setHost("localhost").setMaxPoolSize(CONNS);
         container.logger().info("Connecting ws ");
 
-        client.connectWebsocket("/rtp", new Handler<WebSocket>() {
+        client.connectWebsocket("/default.address", new Handler<WebSocket>() {
             public void handle(WebSocket ws) {
 
                 ws.write(new Buffer(Util.createEventMessage().toString()));
