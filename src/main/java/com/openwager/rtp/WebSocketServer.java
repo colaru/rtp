@@ -28,6 +28,7 @@ public class WebSocketServer extends Verticle {
                     public void handle(final ServerWebSocket ws) {
 //                        ws.write(new Buffer("response-string:   " + ++count));
                         container.logger().info("Connected: " + ++count);
+
                         ws.dataHandler(new Handler<Buffer>() {
                             public void handle(Buffer data) {
                                 container.logger().info("Put an event on Event Bus: " + data.toString());
