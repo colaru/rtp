@@ -1,0 +1,10 @@
+// Application config
+{
+    "webSocketServer": {
+        "port": 8081,
+        "instances": 3
+    },
+    "eventBusVerticle": {
+        "instances": 1
+    }
+}

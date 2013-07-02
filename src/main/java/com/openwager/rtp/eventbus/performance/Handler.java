@@ -23,7 +23,7 @@ public class Handler extends Verticle {
             @Override
             public void handle(Message<String> message) {
 
-//                calculateFibonacciSeries(200);
+                calculateFibonacciSeries(20);
 
                 received++;
                 if (received == batchSize)

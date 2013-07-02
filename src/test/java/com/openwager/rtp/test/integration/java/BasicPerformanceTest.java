@@ -34,7 +34,7 @@ public class BasicPerformanceTest extends TestVerticle {
 //
 //        container.deployVerticle(PerfClient.class.getName());
 
-        testComplete(); // uncomment for long time running the test
+        testComplete(); // comment this line for long time running the test
     }
 
     @Test
@@ -47,6 +47,6 @@ public class BasicPerformanceTest extends TestVerticle {
 //
 //        container.deployVerticle(Sender.class.getName());
 
-        testComplete(); // uncomment for long time running the test
+        testComplete(); // comment this line for long time running the test
     }
 }
