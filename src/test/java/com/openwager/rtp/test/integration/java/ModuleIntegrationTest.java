@@ -27,11 +27,11 @@ public class ModuleIntegrationTest extends TestVerticle {
     private static final int CONNS = 1;
     int connectCount = 0;
 
-  @Test
-  public void testSomethingElse() {
-    // Whatever
-    testComplete();
-  }
+//      @Test
+//      public void testSomethingElse() {
+//        // Whatever
+//        testComplete();
+//      }
 
     @Test
     public void testWebSocketServer() {
@@ -117,13 +117,13 @@ public class ModuleIntegrationTest extends TestVerticle {
     // Deploy the module - the System property `vertx.modulename` will contain the name of the module so you
     // don't have to hardecode it in your tests
 
-    JsonObject config = new JsonObject();
-    JsonObject webSocketServer = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+    String conf = "{\"webSocketServer\": {\"port\": 8080,\"instances\": 1},\"eventBusVerticle\": {\"instances\": 1}}";
+    JsonObject config = new JsonObject(conf);
 
-    JsonObject eventBusVerticle = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
-
-    config.putObject("webSocketServer", webSocketServer);
-    config.putObject("eventBusVerticle", eventBusVerticle);
+//    JsonObject webSocketServer = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+//    JsonObject eventBusVerticle = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+//    config.putObject("webSocketServer", webSocketServer);
+//    config.putObject("eventBusVerticle", eventBusVerticle);
 
     container.deployModule(System.getProperty("vertx.modulename"), config, new AsyncResultHandler<String>() {
       @Override

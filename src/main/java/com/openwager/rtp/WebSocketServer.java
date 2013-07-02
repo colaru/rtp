@@ -19,7 +19,10 @@ public class WebSocketServer extends Verticle {
 
         int port = config.getInteger("port");
 
-        vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).setSendBufferSize(BUFF_SIZE).
+        vertx.createHttpServer().setReceiveBufferSize(BUFF_SIZE).
+                setAcceptBacklog(10000).
+                setSendBufferSize(BUFF_SIZE).
+                setReceiveBufferSize(BUFF_SIZE).
                 websocketHandler(new Handler<ServerWebSocket>() {
                     public void handle(final ServerWebSocket ws) {
 //                        ws.write(new Buffer("response-string:   " + ++count));

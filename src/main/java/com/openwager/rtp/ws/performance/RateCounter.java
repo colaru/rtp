@@ -31,8 +31,8 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
         if (last != 0) {
           System.out.println(" Count: " + count);
           long now = System.currentTimeMillis();
-          long rate = 1000 * (long)count / (now - last);
-          long avRate = 1000 * (long)totCount / (now - start);
+          long rate = 1000 * count / (now - last);
+          long avRate = 1000 * totCount / (now - start);
           count = 0;
           System.out.println((now - start) + " Rate: count/sec: " + rate + " Average rate: " + avRate);
           last = now;
