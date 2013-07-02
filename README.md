@@ -7,11 +7,7 @@
 
 Verticles:
 
-1. BootstrapVerticle - a verticle that starts all other module verticles and is configurable via json files.
-
-Is the main verticle for this module: '"main":"com.openwager.rtp.BootstrapVerticle"'
-
-Configuration file sample (conf.json):
+1. BootstrapVerticle - a verticle that starts all other module verticles and is configurable via json files.Is the main verticle for this module: "main":"com.openwager.rtp.BootstrapVerticle". Configuration file sample (conf.json):
 {
     "webSocketServer": {
         "port": 8081,
@@ -27,17 +23,11 @@ Configuration file sample (conf.json):
 
 Tests:
 1. testEventBusPointToPoint (BasicIntegrationTest) - test event bus point to point
-
 2. testEventBusPublishSubscribe (BasicIntegrationTest) - test event bus pub/subscribe
-
 3. testWebSocketServer (ModuleIntegrationTest) - test for send/receive for WebSocket server
-
 4. testWebSocketServerAndEventBus (ModuleIntegrationTest) - test WebSocket and Event Bus working together
-
 5. testWebsocketPerformance (BasicPerformanceTest) - performance test for WebSocket
-
 6. testEvenBusPerformance (BasicPerformanceTest) - performance test for EventBus
-
 7. testMongoPersistor (ThirdPartyModulesTest) - test for Mongodb persistor
 
 
