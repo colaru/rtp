@@ -1,15 +1,10 @@
 package com.openwager.rtp.test.integration.java;
 
-import com.openwager.rtp.EventBusVerticle;
 import org.junit.Test;
 import org.vertx.java.core.AsyncResult;
 import org.vertx.java.core.AsyncResultHandler;
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.http.HttpClientResponse;
-import org.vertx.java.core.http.HttpServer;
-import org.vertx.java.core.http.HttpServerRequest;
-import org.vertx.java.core.json.JsonArray;
 import org.vertx.java.core.json.JsonObject;
 import org.vertx.testtools.TestVerticle;
 
@@ -31,6 +26,8 @@ public class ThirdPartyModulesTest extends TestVerticle {
                     container.logger().error("Deployment error: ", asyncResult.cause());
                 } else {
                     container.logger().info("Deployment done: io.vertx~mod-mongo-persistor~2.0.0-CR2");
+
+                    // a test for delete all and fiend by criteria can be added here
 
                     String jsonMessage = "{\"action\": \"save\", \"collection\": \"test\", \"document\": {\"firstname\": \"Tim\", \"lastname\": \"Fox\", \"username\": \"tim\", \"password\": \"password\"}}";
 

@@ -41,17 +41,17 @@ public class ModuleIntegrationTest extends TestVerticle {
 
         startTime = System.currentTimeMillis();
         container.logger().info("Starting web socket test");
-        HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
+        HttpClient client = vertx.createHttpClient().setPort(8081).setHost("localhost").setMaxPoolSize(CONNS);
         for (int i = 0; i < CONNS; i++) {
             container.logger().info("Connecting ws: " + (i+1));
             client.connectWebsocket("/rtp", new Handler<WebSocket>() {
                 public void handle(WebSocket ws) {
 
-                    ws.write(new Buffer(createEventMessage().toString()));
+                    ws.write(new Buffer(Util.createEventMessage().toString()));
                     ws.dataHandler(new Handler<Buffer>() {
                         @Override
                         public void handle(Buffer buff) {
-                            assertEquals(buff.toString(), createEventMessage().toString());
+                            assertEquals(buff.toString(), Util.createEventMessage().toString());
                             container.logger().info("Response:  " + buff.toString());
 
                             testComplete();
@@ -71,7 +71,7 @@ public class ModuleIntegrationTest extends TestVerticle {
         vertx.eventBus().registerHandler("default.address", new Handler<Message>() {
             @Override
             public void handle(Message reply) {
-                assertEquals(createEventMessage().toString(), reply.body().toString());
+                assertEquals(Util.createEventMessage().toString(), reply.body().toString());
                 container.logger().info("Response on Event Bus:  " + reply.body().toString());
                 testComplete();
             }
@@ -79,18 +79,18 @@ public class ModuleIntegrationTest extends TestVerticle {
 
 //        vertx.eventBus().publish("default.address", createEventMessage());
 
-        HttpClient client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(CONNS);
+        HttpClient client = vertx.createHttpClient().setPort(8081).setHost("localhost").setMaxPoolSize(CONNS);
         container.logger().info("Connecting ws ");
 
         client.connectWebsocket("/rtp", new Handler<WebSocket>() {
             public void handle(WebSocket ws) {
 
-                ws.write(new Buffer(createEventMessage().toString()));
+                ws.write(new Buffer(Util.createEventMessage().toString()));
 
                 ws.dataHandler(new Handler<Buffer>() {
                     @Override
                     public void handle(Buffer buff) {
-                        assertEquals(buff.toString(), createEventMessage().toString());
+                        assertEquals(buff.toString(), Util.createEventMessage().toString());
                         container.logger().info("Response on Web Socket:  " + buff.toString());
 
                         testComplete();
@@ -100,16 +100,6 @@ public class ModuleIntegrationTest extends TestVerticle {
         });
     }
 
-    private JsonObject createEventMessage() {
-        JsonObject message = new JsonObject().putString("_t", "msg");
-        JsonObject header = new JsonObject().putString("_t", "hdr").putString("cid", "m4");
-        JsonArray numbers = new JsonArray().addNumber(1).addNumber(2).addNumber(12312).addNumber(12);
-        JsonObject body = new JsonObject().putString("_t", "sum").putArray("numbers", numbers);
-        message.putObject("header", header);
-        message.putObject("body", body);
-        return message;
-    }
-
     @Override
   public void start() {
     // Make sure we call initialize() - this sets up the assert stuff so assert functionality works correctly
@@ -117,11 +107,11 @@ public class ModuleIntegrationTest extends TestVerticle {
     // Deploy the module - the System property `vertx.modulename` will contain the name of the module so you
     // don't have to hardecode it in your tests
 
-    String conf = "{\"webSocketServer\": {\"port\": 8080,\"instances\": 1},\"eventBusVerticle\": {\"instances\": 1}}";
+    String conf = "{\"webSocketServer\": {\"port\": 8081,\"instances\": 1},\"eventBusVerticle\": {\"instances\": 1}}";
     JsonObject config = new JsonObject(conf);
 
-//    JsonObject webSocketServer = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
-//    JsonObject eventBusVerticle = new JsonObject().putNumber("port", 8080).putNumber("instances", 1);
+//    JsonObject webSocketServer = new JsonObject().putNumber("port", 8081).putNumber("instances", 1);
+//    JsonObject eventBusVerticle = new JsonObject().putNumber("instances", 1);
 //    config.putObject("webSocketServer", webSocketServer);
 //    config.putObject("eventBusVerticle", eventBusVerticle);
 
