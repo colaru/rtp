@@ -4,10 +4,6 @@ import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.platform.Verticle;
 
-/*
- * This is a simple Java verticle which receives `ping` messages on the event bus and sends back `pong` replies
- *
- */
 public class EventBusVerticle extends Verticle {
 
   public void start() {

@@ -1,14 +1,13 @@
 package com.openwager.rtp.test.integration.java;
 
-import com.openwager.rtp.WebSocketServer;
-import com.openwager.rtp.eventbus.performance.Handler;
-import com.openwager.rtp.eventbus.performance.Sender;
-import com.openwager.rtp.ws.performance.PerfClient;
-import com.openwager.rtp.ws.performance.PerfServer;
-import com.openwager.rtp.ws.performance.RateCounter;
+
+import com.openwager.rtp.test.performance.eventbus.Handler;
+import com.openwager.rtp.test.performance.eventbus.Sender;
+import com.openwager.rtp.test.performance.ws.PerfClient;
+import com.openwager.rtp.test.performance.ws.PerfServer;
+import com.openwager.rtp.test.performance.ws.RateCounter;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.vertx.java.core.json.JsonArray;
 import org.vertx.java.core.json.JsonObject;
 import org.vertx.testtools.TestVerticle;
 
@@ -19,6 +18,7 @@ import static org.vertx.testtools.VertxAssert.testComplete;
  */
 public class BasicPerformanceTest extends TestVerticle {
 
+    @Ignore
     @Test
     public void testWebsocketPerformance() {
 
@@ -37,6 +37,7 @@ public class BasicPerformanceTest extends TestVerticle {
         testComplete(); // comment this line for long time running the test
     }
 
+    @Ignore
     @Test
     public void testEvenBusPerformance() {
 
